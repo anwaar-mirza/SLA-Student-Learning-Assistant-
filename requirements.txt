@@ -7,3 +7,4 @@ langchain-core
 dotenv
 streamlit
 pypdf
+faiss-cpu
