@@ -1,0 +1,87 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Pytest cache
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Language server (VS Code etc.)
+.pyre/
+.pytype/
+
+# VSCode
+.vscode/
+
+# Streamlit
+.streamlit/config.toml
+
+# dotenv
+.env
+.env.*
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# FAISS index
+*.faiss
+*.index
+
+# PDF temp files
+*.pdf~
+*.pdf.cache
+*.pdf.txt
+*.pdf.json
+
+# Output or data folders
+/data/
+outputs/
+__outputs__/
+tmp/
+temp/
