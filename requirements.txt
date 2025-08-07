@@ -1,6 +1,7 @@
 langchain
 langchain-community
 langchain-huggingface
+sentence-transformers.
 langchain-groq
 langchain-core
 dotenv
