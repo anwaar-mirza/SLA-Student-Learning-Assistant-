@@ -43,7 +43,7 @@ class StudentAssistant:
         return HuggingFaceEmbeddings(model="all-MiniLM-L6-v2")
     
     def return_llm(self):
-        return ChatGroq(model="gemma2-9b-it")
+        return ChatGroq(model="openai/gpt-oss-20b")
     
     def return_vector_store(self):
         vsdb = FAISS.from_documents(self.docs, self.embeddings)
