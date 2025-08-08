@@ -44,7 +44,7 @@ class StudentAssistant:
         return HuggingFaceEmbeddings(model="BAAI/bge-small-en-v1.5")
     
     def return_llm(self):
-        return ChatGroq(model="llama-3.3-70b-versatile", temperature=0.1, max_tokens=512)
+        return ChatGroq(model="gemma2-9b-it", temperature=0.3, max_tokens=512)
     
     def return_vector_store(self):
         vsdb = FAISS.from_documents(self.docs, self.embeddings)
