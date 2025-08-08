@@ -209,11 +209,13 @@ def main():
     
     if st.session_state.bot:
         choice = st.radio("Select One of the Following Options: ", ["-- Select an option --", "Important MCQ's", "Important Answer Questions", "Summary", "Chat With Document"])
-        if choice != "-- Select an option --" or choice != "Important MCQ's" or choice != "Important Answer Questions" or choice != "Summary":
-            handle_user_input(choice)
-        elif choice == "Chat With Document":
+        if choice == "Chat With Document":
             render_chat_history()
             handle_user_input(choice)
+        elif choice == "Important MCQ's" or choice == "Important Answer Questions" or choice == "Summary":
+            handle_user_input(choice)
+        else:
+            pass
     else:
         st.info("Please upload a PDF file to begin.")
 
