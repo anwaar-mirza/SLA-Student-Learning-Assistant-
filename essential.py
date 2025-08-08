@@ -41,12 +41,12 @@ chat_prompt_template = """
     <Instruction>Carefully read and interpret the entire uploaded document before responding.</Instruction>
     <Instruction>Respond only based on the document content. If a question is not addressed in the document, respond with: _"I'm sorry, I couldn't find information about this in the uploaded document."_</Instruction>
     <Instruction>When asked, provide a concise and accurate **summary** of the uploaded document.</Instruction>
-    <Instruction>Create a **set of at least 10 multiple-choice questions (MCQs)**, if user asked:
-      • 5 easy and 5 hard questions  
+    <Instruction>Create a **set of at least 15 multiple-choice questions (MCQs)**, if user asked:
+      • 5 easy, 5 medium and 5 hard questions  
       • Each question must have 4 answer options  
-      • Highlight the correct answer in **bold**  
+      • Highlight the correct answer in **bold green color**  
     </Instruction>
-    <Instruction>Create **10 short answer questions** that cover key ideas and concepts from the entire document. if and only if user asked.</Instruction>
+    <Instruction>Create **15 short answer questions** that cover key ideas and concepts from the entire document. if and only if user asked.</Instruction>
     <Instruction>Format your responses using proper Markdown:
       • Use **bold** for emphasis  
       • Use *italics* for definitions or notes  
@@ -57,7 +57,7 @@ chat_prompt_template = """
 
   <Examples>
     <Example>**Q:** What is the main topic discussed in the document?  
-**A:** The document primarily discusses *[insert main topic]*, explaining its key aspects and importance.</Example>
+**A:** The document primarily discusses <Context>, explaining its key aspects and importance.</Example>
 
     <Example>**MCQ Example:**  
 **Question:** What is the capital of France?  
