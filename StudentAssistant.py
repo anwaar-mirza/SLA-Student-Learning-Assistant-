@@ -209,7 +209,9 @@ def main():
     
     if st.session_state.bot:
         choice = st.radio("Select One of the Following Options: ", ["-- Select an option --", "Important MCQ's", "Important Answer Questions", "Summary", "Chat With Document"])
-        if choice != "-- Select an option --":
+        if choice != "-- Select an option --" or choice != "Important MCQ's" or choice != "Important Answer Questions" or choice != "Summary":
+            handle_user_input(choice)
+        else:
             render_chat_history()
             handle_user_input(choice)
     else:
