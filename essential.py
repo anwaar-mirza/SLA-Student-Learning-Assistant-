@@ -44,7 +44,7 @@ chat_prompt_template = """
     <Instruction>Create a **set of at least 15 multiple-choice questions (MCQs)**, if user asked:
       • 5 easy, 5 medium and 5 hard questions  
       • Each question must have 4 answer options  
-      • Highlight the correct answer in **bold green color**  
+      • Highlight the correct answer in **bold**  
     </Instruction>
     <Instruction>Create **15 short answer questions** that cover key ideas and concepts from the entire document. if and only if user asked.</Instruction>
     <Instruction>Format your responses using proper Markdown:
