@@ -9,7 +9,7 @@ A conversational assistant that helps students understand and explore the conten
 - 🔍 **PDF-based Question Answering:** Upload any PDF and ask questions about its contents.
 - 🧠 **RAG Architecture:** Uses Retrieval-Augmented Generation to provide context-aware, accurate answers.
 - 💬 **Session-based Memory:** Keeps track of chat history using Streamlit session state.
-- ⚡ **Groq LLM Integration:** Uses `llama-3.3-70b-versatile` model from Groq for fast and powerful responses.
+- ⚡ **Groq LLM Integration:** Uses `gemma2-9b-it` model from Groq for fast and powerful responses.
 - 🧩 **Semantic Chunking & Search:** Documents are split into overlapping chunks and indexed using FAISS for effective retrieval.
 - 📎 **Chat Interface:** Clean and interactive chat layout using Streamlit.
 
@@ -18,7 +18,7 @@ A conversational assistant that helps students understand and explore the conten
 ## 🛠️ Tech Stack
 
 - **Frontend/UI:** Streamlit  
-- **LLM Provider:** Groq (`llama-3.3-70b-versatile`)  
+- **LLM Provider:** Groq (gemma2-9b-it`)  
 - **Embeddings:** HuggingFace (`BAAI/bge-small-en-v1.5`)  
 - **Vector Store:** FAISS  
 - **PDF Parsing:** LangChain PyPDFLoader  
@@ -34,5 +34,6 @@ A conversational assistant that helps students understand and explore the conten
 ├── essential.py               # Stores `contextualize_q_system_prompt` and `chat_prompt_template`                     
 ├── requirements.txt           # Python dependencies
 └── README.md                  # This file
+
 
 
