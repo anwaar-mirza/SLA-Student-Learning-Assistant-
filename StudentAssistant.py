@@ -41,7 +41,7 @@ class StudentAssistant:
         return chunker.split_documents(documents)
     
     def return_embeddings(self):
-        return HuggingFaceEmbeddings(model="BAAI/bge-small-en-v1.5")
+        return HuggingFaceEmbeddings(model="sentence-transformers/all-MiniLM-L6-v2")
     
     def return_llm(self):
         return ChatGroq(model="llama-3.1-8b-instant", temperature=0.3)
