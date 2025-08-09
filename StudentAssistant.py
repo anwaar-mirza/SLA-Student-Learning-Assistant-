@@ -38,11 +38,11 @@ class StudentAssistant:
         loader = PyPDFLoader(self.file)
         documents = loader.load()
         if not documents:
-            st.error('The PDF contains no readable text.')
+            st.error("There is a problem in your document...")
         chunker = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=250)
         docs = chunker.split_documents(documents)
         if not docs:
-            st.error("Text was loaded but no chunks were created.")
+            st.error("There is a problem in your document...")
         return docs
     
     def return_embeddings(self):
@@ -53,7 +53,7 @@ class StudentAssistant:
     
     def return_vector_store(self):
         if not self.docs:
-            st.error("No document chunks available for FAISS indexing.")
+            st.error("There is a problem in your document...")
         vsdb = FAISS.from_documents(self.docs, self.embeddings)
         return vsdb.as_retriever()
 
