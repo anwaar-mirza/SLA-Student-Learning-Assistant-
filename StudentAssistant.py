@@ -37,10 +37,8 @@ class StudentAssistant:
     def loading_and_chunking(self):
         loader = PyPDFLoader(self.file)
         documents = loader.load()
-        st.write(documents)
         chunker = SemanticChunker(embeddings=self.embeddings, breakpoint_threshold_type="percentile")
         docs = chunker.split_documents(documents)
-        st.write(docs)
         return docs
     
     def return_embeddings(self):
