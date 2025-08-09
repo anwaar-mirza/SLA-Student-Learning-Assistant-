@@ -17,11 +17,11 @@ import random
 import string
 import os
 load_dotenv()
-# os.environ['HF_TOKEN'] = st.secrets['HF_TOKEN']
-# os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
+os.environ['HF_TOKEN'] = st.secrets['HF_TOKEN']
+os.environ['GROQ_API_KEY'] = st.secrets['GROQ_API_KEY']
 
-os.environ['HF_TOKEN'] = os.getenv('HF_TOKEN')
-os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+# os.environ['HF_TOKEN'] = os.getenv('HF_TOKEN')
+# os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 
 class StudentAssistant:
     def __init__(self, contextual_prompt, prompt_templete, file):
@@ -44,7 +44,7 @@ class StudentAssistant:
         return HuggingFaceEmbeddings(model="BAAI/bge-small-en-v1.5")
     
     def return_llm(self):
-        return ChatGroq(model="gemma2-9b-it", temperature=0.3)
+        return ChatGroq(model="llama-3.1-8b-instant", temperature=0.3)
     
     def return_vector_store(self):
         vsdb = FAISS.from_documents(self.docs, self.embeddings)
