@@ -1,7 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_experimental.text_splitter import SemanticChunker
+langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain.chains import create_history_aware_retriever, create_retrieval_chain
@@ -37,7 +37,7 @@ class StudentAssistant:
     def loading_and_chunking(self):
         loader = PyPDFLoader(self.file)
         documents = loader.load()
-        chunker = SemanticChunker(embeddings=self.embeddings, breakpoint_threshold_type="percentile")
+        chunker = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=250)
         docs = chunker.split_documents(documents)
         return docs
     
